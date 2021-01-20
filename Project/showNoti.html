@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Noti Page</title>
+    <title>Detail Information Page</title>
+    <!-- <link rel="stylesheet" href="assets/css/reset.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header-16.css" /> -->
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="homepage.js"></script>
+
+    <style>
+        #tt {
+            font-size: 30px;
+            display: block;
+            list-style-type: disc;
+            margin-top: 1em;
+            margin-bottom: 1 em;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 40px;
+            color: black;
+        }
+        
+        #thongbao {
+            color: #253B80;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        
+        #a {
+            width: 40%;
+            border: 1px solid grey;
+            border-radius: 8px;
+        }
+        
+        #a a {
+            color: black;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- logo -->
+        <div id="logo">
+            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
+        </div>
+
+        <!-- navigator -->
+        <div class="nav-button">
+            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
+        </div>
+        <div class="subject-dropdown">
+            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
+            <div class="subject-dropdown-content">
+                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
+                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
+        </div>
+
+
+        <div id="avatar">
+            <img src="images/header/avatar.svg" alt="Avatar">
+        </div>
+
+        <!-- view more profile-->
+        <div class="view-more-profile">
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img src="images/header/down-arrow.svg" alt=""></button>
+            <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
+                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
+                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
+                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
+                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="a" style="margin-left: 30%;">
+        <h1 id="thongbao" style="text-align: center;">NEWS</h1>
+        <ul id="tt">
+            <li><a href="deatailNoti.html">Thông báo lịch nghỉ Tết Âm Lịch</a></li>
+            </br>
+            <li><a href="deatailNoti.html">Thông báo nộp học phí</a></li>
+            </br>
+            <li><a href="deatailNoti.html">Thông báo thay đổi lịch học do dịch covid-19</a></li>
+            </br>
+        </ul>
+    </div>
+    <br><br>
+    <!-- footer -->
+    <div class="footer">
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
+        </div>
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
+        </div>
+    </div>
+</body>
+
+</html>

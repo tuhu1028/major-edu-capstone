@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('login-background.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .login {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        /* #login-bg {
+            width: 86%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <!-- <img id="login-bg" src="images\login\login-background.svg" alt="Login Background Image"> -->
+        <div id="mainContent">
+            <div id="contentTab">
+                <button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Login</button>
+                <button class="tablink" onclick="openPage('News', this)">Reset Password</button>
+            </div>
+            <div id="mainWrapper">
+
+                <div id="Home" class="tabcontent">
+                    Username: <input type="text" id="username" required/>
+                    <br/>
+                    <br/> Password: <input type="password" id="password" required/>
+                    <br/>
+                    <br/>
+                    <input type="button" onclick="location.href='homepage.html';" value="Login" id="loginButton" />
+                    <br/>
+                    <br/> Remember Me <input type="checkbox" />
+                </div>
+
+                <div id="News" class="tabcontent">
+                    Username: <input type="text" id="username" required/>
+                    <br/>
+                    <br/>
+                    <input type="button" value="Reset Password" id="loginButton" />
+                    <br/>
+                    <br/>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

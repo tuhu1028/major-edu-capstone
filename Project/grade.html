@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>grade page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/reset.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header-16.css" /> -->
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="myfunction.js"></script>
+    <style>
+        h1 {
+            font-size: 50px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        
+        thead {
+            font-family: cursive;
+            color: #253B80;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        
+        td,
+        th {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .linkReview {
+            color: blue;
+            text-decoration: underline;
+        }
+        /*         
+        * {
+            box-sizing: border-box;
+        } */
+        /* Header/logo Title .header {
+            background-color: #FFDD17;
+            font-size: 30px;
+        }
+        
+        .header::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #262261;
+            display: block;
+            float: left;
+            width: 100%;
+            font-size: 20px;
+        }
+        
+        .navbar a.active {
+            background-color: #666;
+            color: white;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 5;
+            padding: 5;
+            overflow: hidden;
+            background-color: #262261;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #FFDD17;
+            color: #262261;
+        }
+        
+        li.dropdown {
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: #262261;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .grid-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 40px;
+            background-color: white;
+            padding: 50px;
+            border: #666;
+            background-image: linear-gradient(to bottom right, white, #26D8D8);
+        }
+        
+        .grid-container>div {
+            background-image: url(imgae/unit.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 120px 0;
+            font-size: 70px;
+            background-position: center;
+            border: 2px;
+            border-radius: 50px 50px;
+        } */
+        /* .logo {
+            width: 40%;
+            float: left;
+            /* background-color: blueviolet;
+    height: 100px;
+    margin-left: 50px;
+}
+*/
+        /*         
+        .account {
+            text-align: right;
+            width: 20%;
+            float: left;
+            margin-left: 10%;
+        }
+        
+        .headermajor {
+            height: 100px;
+            width: 45%;
+            float: left;
+        }
+        
+        .banner {
+            height: 300px;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 750px 400px;
+            background-image: url(image/banner.png);
+            background-color: #FFDD17;
+            margin-top: 50px;
+            font-size: 30px;
+            margin: 0;
+            text-align: center;
+        } */
+        /* .banner-text {
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 47%;
+            font-family: cursive;
+            color: #253B80;
+        }
+        
+        .account_logo {
+            border-radius: 50px 50px;
+            width: 50px;
+            height: 50px;
+            background-color: #f1f1f1;
+            background-image: url(imgae/account_logo.png);
+            background-size: 50px 50px;
+            background-position: center;
+            margin-left: 50px;
+            margin-top: 10px;
+            float: left;
+        } */
+        /* .account_name {
+            float: left;
+            margin-top: 5%;
+            padding-left: 5%;
+        } */
+        /* .footer::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .footer_column_contact {
+            float: left;
+            width: 50%;
+            padding: 50px;
+            padding-left: 10%;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .footer_column_logo {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        } */
+        /* #boderHeader {
+            border: 1px solid black;
+        } */
+        
+        #gradeLink {
+            color: #FFDD17;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- logo -->
+        <div id="logo">
+            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
+        </div>
+
+        <!-- navigator -->
+        <div class="nav-button">
+            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
+        </div>
+        <div class="subject-dropdown">
+            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
+            <div class="subject-dropdown-content">
+                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
+                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
+        </div>
+
+
+        <div id="avatar">
+            <img src="images/header/avatar.svg" alt="Avatar">
+        </div>
+
+        <!-- view more profile-->
+        <div class="view-more-profile">
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img src="images/header/down-arrow.svg" alt=""></button>
+            <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
+                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
+                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
+                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
+                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div id="boderHeader"></div>
+    <table id="tableGrade">
+        <thead>
+            <tr>
+                <th>Grade Item</th>
+                <th>Grade</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+        <tbody id="bodyTable">
+            <tr>
+                <td>Quiz Unit 1</td>
+                <td>7</td>
+                <td><a class="linkReview" href="reviewQuiz.html">Review</a></td>
+            </tr>
+            <tr>
+                <td>Quiz Unit 2</td>
+                <td>8</td>
+                <td><a class="linkReview" href="#">Review</a></td>
+            </tr>
+            <tr>
+                <td>Quiz Unit 3</td>
+                <td>9</td>
+                <td><a class="linkReview" href="#">Review</a></td>
+            </tr>
+            <tr>
+                <td>Quiz Unit 4</td>
+                <td>10</td>
+                <td><a class="linkReview" href="#">Review</a></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div id="boderHeader"></div>
+    <!-- footer -->
+    <div class="footer">
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
+        </div>
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
+        </div>
+    </div>
+</body>
+
+</html>

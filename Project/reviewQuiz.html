@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/reset.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header-16.css" />
+    <link rel="stylesheet" href="grade.html" type="text/css"> -->
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="myfunction.js"></script>
+
+    <style>
+        #logoqq {
+            width: 500px;
+            height: 200px;
+        }
+        
+        h1 {
+            padding-top: 50px;
+            font-family: cursive;
+            font-size: 30px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        #quiz {
+            padding-top: 20px;
+            font-family: cursive;
+            font-size: 20px;
+        }
+        
+        div {
+            color: red;
+        }
+        
+        #linkFinish {
+            padding: 30px;
+            color: #004085;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- logo -->
+        <div id="logo">
+            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
+        </div>
+
+        <!-- navigator -->
+        <div class="nav-button">
+            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
+        </div>
+        <div class="subject-dropdown">
+            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
+            <div class="subject-dropdown-content">
+                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
+                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
+        </div>
+
+
+        <div id="avatar">
+            <img src="images/header/avatar.svg" alt="Avatar">
+        </div>
+
+        <!-- view more profile-->
+        <div class="view-more-profile">
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img src="images/header/down-arrow.svg" alt=""></button>
+            <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
+                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
+                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
+                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
+                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Quiz 1</h1>
+
+
+    <form id="quiz" name="myform">
+        <h3>Grade: 7</h3>
+        <br> Q1.What is the capital of Vietnam ?<br>
+        <input checked type="radio" name="question_01" value="a"> Da Nang<br>
+        <input type="radio" name="question_01" value="b"> Ho Chi Minh<br>
+        <input type="radio" name="question_01" value="c"> Ha Noi<br>
+        <input type="radio" name="question_01" value="d"> Hai Phong<br><br>
+        <div>Answer: C</div>
+        </br>
+        </br>
+        Q2. HTML stands for...?<br>
+        <input checked type="radio" name="question_02" value="a"> hypertext markup language<br>
+        <input type="radio" name="question_02" value="b"> hypertension markup language<br><br>
+        <div>Answer: A</div>
+        </br>
+        </br>
+        Q3. Which country is the largest in the world?<br>
+        <input checked type="radio" name="question_03" value="a"> Russia<br>
+        <input type="radio" name="question_03" value="b"> China<br>
+        <input type="radio" name="question_03" value="c"> America<br>
+        <input type="radio" name="question_03" value="d"> India<br><br>
+        <div>Answer: A</div>
+        </br>
+        </br>
+
+
+    </form>
+    <a id="linkFinish" href="homepage.html">Finish Review</a>
+    <br><br><br><br><br><br>
+    <!-- footer -->
+    <div class="footer">
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
+        </div>
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
+        </div>
+    </div>
+
+</body>
+
+</html>

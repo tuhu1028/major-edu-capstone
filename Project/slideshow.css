@@ -1,0 +1,23 @@
+.slideshow {
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.image-slide {
+    width: 100%;
+}
+
+#previous {
+    text-transform: uppercase;
+    top: 250px;
+    left: 50px;
+    position: absolute;
+}
+
+#next {
+    text-transform: uppercase;
+    top: 250px;
+    right: 50px;
+    position: absolute;
+}

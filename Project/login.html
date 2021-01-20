@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header-1.css" />
+    <link rel="stylesheet" href="styles/header-2.css" />
+
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        /* * {
+            box-sizing: border-box
+        } */
+        /* Set height of body and the document to 100% */
+        
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+        /* Style tab links */
+        
+        body {
+            background-image: url('login-background.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .tablink {
+            background-color: #253B80;
+            border-radius: 8px;
+            color: white;
+            float: left;
+            border: 1px solid black;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 50%;
+            font-weight: bold;
+        }
+        
+        .tablink:hover {
+            background-color: #179BD7;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        
+        .tabcontent {
+            color: black;
+            display: none;
+            padding: 150px 20px;
+            height: 100%;
+            font-weight: bold;
+        }
+        
+        div#mainContent {
+            /* tổng */
+            /* margin-top: 1%;
+            margin-left: 30%;
+            background-color: whitesmoke;
+            width: 550px;
+            border: 1px solid grey; */
+            border-radius: 8px;
+            background-image: url('login-form-background.svg');
+            position: absolute;
+            left: 9.65%;
+            right: 50.55%;
+            top: 28.82%;
+            bottom: 22.18%;
+        }
+        
+        div#mainWrapper {
+            margin-left: 20%;
+        }
+        
+        #loginButton {
+            margin-left: 28%;
+            background-color: #253B80;
+            width: 120px;
+            height: 30px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        #loginButton:hover {
+            background-color: #179BD7;
+        }
+        /* #username {
+            position: absolute;
+            left: 16.18%;
+            right: 57.08%;
+            top: 44.24%;
+            bottom: 50.08%;
+            background: #FFFFFF;
+            border: none;
+            border-radius: 5%;
+        }
+        
+        #password {
+            position: absolute;
+            left: 16.18%;
+            right: 57.08%;
+            top: 52.28%;
+            bottom: 42.05%;
+            background: #FFFFFF;
+            border: none;
+            border-radius: 5%;
+        }
+        
+        #rememberme {
+            position: absolute;
+            left: 17.29%;
+            right: 81.61%;
+            top: 59.96%;
+            bottom: 38.09%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="mainContent">
+        <div id="contentTab">
+            <button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Login</button>
+            <button class="tablink" onclick="openPage('News', this)">Reset Password</button>
+        </div>
+        <div id="mainWrapper">
+
+            <div id="Home" class="tabcontent">
+                Username: <input type="text" id="username" required/>
+                <br/>
+                <br/> Password: <input type="password" id="password" required/>
+                <br/>
+                <br/>
+                <input type="button" onclick="location.href='homepage.html';" value="Login" id="loginButton" />
+                <br/>
+                <br/> Remember Me <input type="checkbox" />
+            </div>
+
+            <div id="News" class="tabcontent">
+                Username: <input type="text" id="username" required/>
+                <br/>
+                <br/>
+                <input type="button" value="Reset Password" id="loginButton" />
+                <br/>
+                <br/>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo Progress Test">
+    <meta name="author" content="Uyen DLT">
+    <link rel="stylesheet" href="headerandfooter.css">
+    <link rel="stylesheet" href="nav.css">
+
+
+    <title>Demo Progress Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .grid-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 40px;
+            background-color: white;
+            padding: 50px;
+            border: #666;
+            /* background-image: linear-gradient(to bottom right,white ,#26D8D8); */
+        }
+        
+        .grid-container>div {
+            background-image: url(image/unit.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 120px 0;
+            font-size: 70px;
+            background-position: center;
+            border: 2px;
+            border-radius: 50px 50px;
+        }
+        
+        .logo {
+            width: 40%;
+            float: left;
+            /* background-color: blueviolet; */
+            height: 100px;
+            margin-left: 50px;
+        }
+        
+        .account {
+            text-align: right;
+            width: 20%;
+            float: left;
+            /* background-color: aquamarine; */
+            margin-left: 10%;
+        }
+        
+        .headermajor {
+            height: 100px;
+            width: 45%;
+            float: left;
+            /* background-color: bisque; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo" style="width: fit-content;">
+            <a href="#"><img src="image/logo.jpg" width="300px" height="100px"></a>
+        </div>
+        <div class="headermajor"> </div>
+        <div class="account">
+            <div class="account_logo"></div>
+            <div class="account_name">
+                <a href="#">Account Name</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <!-- <img src="image/banner.png" width="750px" height="350px"> -->
+        <div class="banner-text">
+            <h1>Unit</h1>
+        </div>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Subject</a>
+                <div class="dropdown-content">
+                    <a href="#">Math</a>
+                    <a href="#">Science</a>
+                </div>
+            </li>
+            <li><a href="#news">Unit</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="grid-container">
+            <div><a href="#">1</a></div>
+            <div><a href="#">2</a></div>
+            <div><a href="#">3</a></div>
+            <div><a href="#">4</a></div>
+            <div><a href="#">5</a></div>
+            <div><a href="#">6</a></div>
+            <div><a href="#">7</a></div>
+            <div><a href="#">8</a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_column_contact">
+            <p>
+                Liên hệ hợp tác:
+                <br>Nguyễn Như Anh
+                <br>Tel.0912 494 707 - (04) 7307 7979 (#62120)
+                <br>Email: anhnguyenthinhu@admicro.vn
+            </p>
+        </div>
+        <div class="footer_column_logo">
+            <img src="image/footer_logo.jpg" width="500px" height="200px">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

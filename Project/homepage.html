@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="homepage.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <!-- logo -->
+        <div id="logo">
+            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
+        </div>
+
+        <!-- navigator -->
+        <div class="nav-button">
+            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
+        </div>
+        <div class="subject-dropdown">
+            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
+            <div class="subject-dropdown-content">
+                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
+                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
+        </div>
+
+
+        <div id="avatar">
+            <img src="images/header/avatar.svg" alt="Avatar">
+        </div>
+
+        <!-- view more profile-->
+        <div class="view-more-profile">
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img src="images/header/down-arrow.svg" alt=""></button>
+            <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
+                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
+                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
+                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
+                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+        <!-- images -->
+
+
+        <img class="image-slide" src="images/homepage/banner science.svg" stt="0">
+        <img class="image-slide" src="images/homepage/banner-1.jpg" stt="1" style="display: none;">
+        <img class="image-slide" src="images/homepage/banner-2.jpg" stt="2" style="display: none;">
+        <img class="image-slide" src="images/homepage/banner-3.jpg" stt="3" style="display: none;">
+
+        <!-- Next and previous buttons -->
+        <a href="#" id="previous"><img src="images/homepage/previous-btn.svg" alt="Previous Button"></a>
+        <a href="#" id="next"><img src="images/homepage/next-btn.svg" alt="Next Button"></a>
+    </div>
+
+
+    <!-- Announcement -->
+    <div class="annoucement">
+        <div id="annoucement-title">
+            <img src="images/homepage/announcement.svg" alt="Title">
+        </div>
+        <div id="annoucement-bg">
+            <div id="content">
+                <div id="bullet">
+                    <img src="images/homepage/bullet.svg" alt="Bullet"><br><br>
+                    <img src="images/homepage/bullet.svg" alt="Bullet"><br><br>
+                    <img src="images/homepage/bullet.svg" alt="Bullet">
+                </div>
+                <div id="annoucement-content">
+                    <a href="deatailNoti.html">Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</a><br><br>
+                    <a href="deatailNoti.html">Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</a><br><br>
+                    <a href="deatailNoti.html">Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</a><br><br>
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
+        </div>
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
+        </div>
+    </div>
+
+</body>
+
+</html>
