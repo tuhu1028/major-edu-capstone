@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="mystyle.css">
     <script src="myfunction.js"></script>
 
-    <title>Demo Unit</title>
+    <title>Demo Science Unit</title>
     <style>
         * {
             box-sizing: border-box;
@@ -23,9 +23,9 @@
             margin-left: 10px;
             margin-right: 10px;
             display: grid;
-            grid-template-columns: 400px 400px 300px;
-            grid-template-rows: 300px 300px 300px 300px;
-            grid-gap: 40px;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            grid-gap: 30px;
             /* background-color: aquamarine; */
             padding: 50px;
             border: #666;
@@ -42,11 +42,11 @@
             background-repeat: no-repeat;
             background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
-            padding: 100px 0;
-            font-size: 70px;
+            padding: 30px 0;
+            font-size: 50px;
             background-position: center;
-            border: 2px;
-            border-radius: 50px 50px;
+            border: 0px;
+            border-radius: 20px 20px;
         }
         
         a {
@@ -68,6 +68,22 @@
             /* background-color: blueviolet; */
             height: 100px;
             margin-left: 50px;
+        }
+        
+        .contents_name {
+            overflow: hidden;
+            /* background-color: aqua; */
+            text-align: center;
+            width: 100%;
+            font-size: 50px;
+            float: left;
+            height: 120px;
+            padding: 20px;
+        }
+        
+        .contents_name img {
+            border: 0px;
+            border-radius: 20px 20px;
         }
     </style>
     <!-- <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -111,7 +127,8 @@
 
         <!-- view more profile-->
         <div class="view-more-profile">
-            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img src="images/header/down-arrow.svg" alt=""></button>
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img
+                    src="images/header/down-arrow.svg" alt=""></button>
             <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
                 <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
                 <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
@@ -122,6 +139,9 @@
     </div>
 
     <div class="main">
+        <div class="contents_name">
+            <img src="image/contents_science.jpg" height="100px" width="600px">
+        </div>
         <div class="grid-container">
             <div><a href="map.html">1</a></div>
             <div><a href="map.html">2</a></div>

@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Demo Progress Test">
+    <meta name="description" content="Demo Quiz">
     <meta name="author" content="Uyen DLT">
     <!-- <link rel="stylesheet" href="css/headerandfooter.css">
     <link rel="stylesheet" href="css/nav.css"> -->
     <link rel="stylesheet" href="mystyle.css">
     <script src="myfunction.js"></script>
 
-
-    <title>Demo Progress Test</title>
+    <title>Demo Quiz</title>
     <style>
         * {
             box-sizing: border-box;
@@ -59,11 +58,131 @@
             margin-left: 10%;
         }
         
-        .headermajor {
-            height: 100px;
-            width: 45%;
+        .main {
             float: left;
-            /* background-color: bisque; */
+            /* background-color: #666; */
+            position: relative;
+            width: 100%;
+        }
+        
+        .quizMain {
+            width: 90%;
+            border: 2px solid #262261;
+            border-radius: 10px;
+            height: 700px;
+            margin: 5%;
+            background-color: bisque;
+            float: left;
+        }
+        
+        .quizMain::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .quizQuesition {
+            float: left;
+            /* background-color: #666; */
+            position: relative;
+            width: 55%;
+            height: 80%;
+            margin-left: 5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            /* width question: 55+5=60 */
+        }
+        
+        .quizQuesition>div {
+            margin-left: 10%;
+            margin-right: 20%;
+            position: absolute;
+            top: 10%;
+            width: 70%;
+            font-size: xx-large;
+        }
+        
+        .quizAnswer {
+            width: 40%;
+            position: relative;
+            font-size: 40px;
+            /* background-color: #FFDD17; */
+            float: left;
+            margin-top: 10%;
+        }
+        
+        img.imgQuiz {
+            /* background-color: aqua; */
+            position: relative;
+            width: 100%;
+            height: 80%;
+        }
+        
+        input[type=radio] {
+            border: 3px;
+            width: 30px;
+            height: 3em;
+            margin-left: 0;
+        }
+        
+        input[type=submit] {
+            border: 3px;
+            width: 40%;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 30px 30px;
+            border: 3px solid #262261;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+        }
+        
+        th {
+            height: 150px;
+        }
+        
+        .result {
+            font-size: large;
+            margin: 40px;
+        }
+        
+        table {
+            text-align: center;
+            border: 1;
+            width: 70%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        
+        table,
+        td,
+        th {
+            border: 2px solid white;
+            background-color: lemonchiffon;
+        }
+        
+        th {
+            height: 60px;
+            background-color: darkblue;
+            color: white;
+        }
+        
+        td {
+            height: 80px;
+        }
+        
+        button {
+            background-color: red;
+            color: aliceblue;
+        }
+        
+        .process {
+            margin-top: 50px;
+            background-color: lightgrey;
+            border: 1px solid black;
+            margin-left: 20%;
+            margin-right: 20%;
         }
     </style>
 </head>
@@ -73,85 +192,82 @@
     <div class="header">
         <!-- logo -->
         <div id="logo">
-            <img src="Logo Major.jpg " alt="logo ">
+            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
         </div>
 
+        <!-- navigator -->
+        <div class="nav-button">
+            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
+        </div>
+        <div class="subject-dropdown">
+            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
+            <div class="subject-dropdown-content">
+                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
+                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
+        </div>
+
+
         <div id="avatar">
-            <img src="user.png " alt="user">
+            <img src="images/header/avatar.svg" alt="Avatar">
         </div>
 
         <!-- view more profile-->
         <div class="view-more-profile">
-            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv</button>
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img
+                    src="images/header/down-arrow.svg" alt=""></button>
             <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
-                <a href="profile.html">Profile</a>
-                <a href="changepassword.html">Change password</a>
-                <a href="grade.html">Grade</a>
-                <a href="login.html">Log out</a>
+                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
+                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
+                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
+                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
             </div>
         </div>
     </div>
 
-    <!-- navigator -->
-    <div class="navbar">
-        <a href="homepage.html">Homepage</a>
+    <div class="main" style="float: left;position: absolute;">
+        <div class="process">
+            <p>Niên học: 2020-2021. Hôm nay: 24/01/2021</p>
+            <div class="result">
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Class</th>
+                        <th>Unit Present</th>
+                        <th>Result Process</th>
+                        <th>Continute</th>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td>1A</td>
+                        <td>Unit 4</td>
+                        <td>100%</td>
+                        <td><button>Let's go</button></td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>1A</td>
+                        <td>Unit 3</td>
+                        <td>30%</td>
+                        <td><button onclick="unit.html" type="button">Let's go</button></td>
+                    </tr>
 
-        <div class="subject-dropdown">
-            <button class="subject-dropbtn">Subject
-          </button>
-            <div class="subject-dropdown-content">
-                <a href="progress.html ">Math</a>
-                <a href="progress.html ">Science</a>
+                </table>
             </div>
         </div>
-        <a href="showNoti.html ">News</a>
     </div>
-
-
-    <div class="banner">
-        <!-- <img src="image/banner.png" width="750px" height="350px"> -->
-        <!-- <div class="banner-text">
-            <h1>Unit</h1>
-        </div> -->
-    </div>
-    <!-- <div class="navbar">
-        <ul>
-            <li><a href="#home">Dashboard</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Subject</a>
-                <div class="dropdown-content">
-                    <a href="#">Math</a>
-                    <a href="#">Science</a>
-                </div>
-            </li>
-            <li><a href="#news">Unit</a></li>
-        </ul>
-    </div> -->
-    <div class="main">
-        <div class="grid-container">
-            <div><a href="map.html">1</a></div>
-            <div><a href="map.html">2</a></div>
-            <div><a href="map.html">3</a></div>
-            <div><a href="map.html">4</a></div>
-            <div><a href="map.html">5</a></div>
-            <div><a href="map.html">6</a></div>
-            <div><a href="map.html">7</a></div>
-            <div><a href="map.html">8</a></div>
-        </div>
-    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- footer -->
     <div class="footer">
-        <div class="footer_column_contact">
-            <p>
-                Liên hệ hợp tác:
-                <br>Nguyễn Như Anh
-                <br>Tel.0912 494 707 - (04) 7307 7979 (#62120)
-                <br>Email: anhnguyenthinhu@admicro.vn
-            </p>
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
         </div>
-        <div class="footer_column_logo">
-            <img src="image/footer_logo.jpg" width="500px" height="200px">
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
         </div>
-
     </div>
 
 </body>
