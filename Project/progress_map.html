@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo Quiz">
+    <meta name="author" content="Uyen DLT">
+    <!-- <link rel="stylesheet" href="css/headerandfooter.css">
+    <link rel="stylesheet" href="css/nav.css"> -->
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="myfunction.js"></script>
+
+    <title>Demo Quiz</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .grid-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 40px;
+            background-color: white;
+            padding: 50px;
+            border: #666;
+            /* background-image: linear-gradient(to bottom right,white ,#26D8D8); */
+        }
+        
+        .grid-container>div {
+            background-image: url(image/unit.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 120px 0;
+            font-size: 70px;
+            background-position: center;
+            border: 2px;
+            border-radius: 50px 50px;
+        }
+        
+        .logo {
+            width: 40%;
+            float: left;
+            /* background-color: blueviolet; */
+            height: 100px;
+            margin-left: 50px;
+        }
+        
+        .account {
+            text-align: right;
+            width: 20%;
+            float: left;
+            /* background-color: aquamarine; */
+            margin-left: 10%;
+        }
+        
+        .main {
+            float: left;
+            /* background-color: #666; */
+            position: relative;
+            width: 100%;
+        }
+        
+        .quizMain {
+            width: 90%;
+            border: 2px solid #262261;
+            border-radius: 10px;
+            height: 700px;
+            margin: 5%;
+            background-color: bisque;
+            float: left;
+        }
+        
+        .quizMain::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .quizQuesition {
+            float: left;
+            /* background-color: #666; */
+            position: relative;
+            width: 55%;
+            height: 80%;
+            margin-left: 5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            /* width question: 55+5=60 */
+        }
+        
+        .quizQuesition>div {
+            margin-left: 10%;
+            margin-right: 20%;
+            position: absolute;
+            top: 10%;
+            width: 70%;
+            font-size: xx-large;
+        }
+        
+        .quizAnswer {
+            width: 40%;
+            position: relative;
+            font-size: 40px;
+            /* background-color: #FFDD17; */
+            float: left;
+            margin-top: 10%;
+        }
+        
+        img.imgQuiz {
+            /* background-color: aqua; */
+            position: relative;
+            width: 100%;
+            height: 80%;
+        }
+        
+        input[type=radio] {
+            border: 3px;
+            width: 30px;
+            height: 3em;
+            margin-left: 0;
+        }
+        
+        input[type=submit] {
+            border: 3px;
+            width: 40%;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 30px 30px;
+            border: 3px solid #262261;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+        }
+        
+        th {
+            height: 200px;
+        }
+        
+        .result {
+            font-size: large;
+            margin: 40px;
+        }
+        
+        table {
+            text-align: center;
+            border: 1;
+            width: 80%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        
+        table,
+        td,
+        th {
+            border: 2px solid white;
+            background-color: lemonchiffon;
+        }
+        
+        th {
+            height: 60px;
+            background-color: cornflowerblue;
+            color: white;
+        }
+        
+        td {
+            height: 80px;
+        }
+        
+        button {
+            background-color: red;
+            color: aliceblue;
+        }
+        
+        .process {
+            margin-top: 50px;
+            background-color: lightgrey;
+            border: 1px solid black;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- logo -->
+        <div id="logo">
+            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
+        </div>
+
+        <!-- navigator -->
+        <div class="nav-button">
+            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
+        </div>
+        <div class="subject-dropdown">
+            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
+            <div class="subject-dropdown-content">
+                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
+                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
+        </div>
+
+
+        <div id="avatar">
+            <img src="images/header/avatar.svg" alt="Avatar">
+        </div>
+
+        <!-- view more profile-->
+        <div class="view-more-profile">
+            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img
+                    src="images/header/down-arrow.svg" alt=""></button>
+            <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
+                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
+                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
+                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
+                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" style="float: left;position: absolute;">
+        <div class="process">
+            <p>Niên học: 2020-2021. Hôm nay: 24/01/2021</p>
+            <div class="result">
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th>Lesson 1</th>
+                        <th>Lesson 2</th>
+                        <th>Exercise 1.1</th>
+                        <th>Exercise 1.2</th>
+                        <th>Exercise 1.3</th>
+                    </tr>
+                    <tr>
+                        <th>Result</th>
+                        <td>4/5</td>
+                        <td>0/5</td>
+                        <td>4/10</td>
+                        <td>5/10</td>
+                        <td>0/10</td>
+                    </tr>
+                    <tr>
+                        <th>Process</th>
+                        <td>80%</td>
+                        <td>0%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <th style="background-color: darkblue;">Done</th>
+                        <td style="background-color: #666;"></td>
+                        <td style="background-color: #666;"></td>
+                        <td align="center" style="text-align:center; font-size:150%; font-weight:bold; color:green;">
+                            &#x2714</td>
+                        <td align="center" style="text-align:center; font-size:150%; font-weight:bold; color:green;">
+                            &#x2714</td>
+                        <td align="center" style="text-align:center; font-size:150%; font-weight:bold; color:red;">
+                            X</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <!-- footer -->
+    <div class="footer">
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
+        </div>
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
+        </div>
+    </div>
+
+</body>
+
+</html>
