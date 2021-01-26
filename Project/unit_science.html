@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo Unit">
+    <meta name="author" content="Uyen DLT">
+    <!-- <link rel="stylesheet" href="css/headerandfooter.css">
+    <link rel="stylesheet" href="css/nav.css"> -->
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="myfunction.js"></script>
+
+    <title>Demo Science Unit</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .grid-container {
+            /* transform: translate(10%, 10%); */
+            height: max-content;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            grid-gap: 30px;
+            /* background-color: aquamarine; */
+            padding: 50px;
+            border: #666;
+            /* background-image: linear-gradient(to bottom right,white ,#26D8D8); */
+        }
+        
+        main {
+            text-align: center;
+        }
+        
+        .grid-container>div {
+            background-image: url(image/unit.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 50px;
+            background-position: center;
+            border: 0px;
+            border-radius: 20px 20px;
+        }
+        
+        a {
+            text-decoration: solid;
+        }
+        
+        a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+        
+        selector:hover {
+            color: blueviolet;
+        }
+        
+        .logo {
+            width: 40%;
+            float: left;
+            /* background-color: blueviolet; */
+            height: 100px;
+            margin-left: 50px;
+        }
+        
+        .contents_name {
+            overflow: hidden;
+            /* background-color: aqua; */
+            text-align: center;
+            width: 100%;
+            font-size: 50px;
+            float: left;
+            height: 120px;
+            padding: 20px;
+        }
+        
+        .contents_name img {
+            border: 0px;
+            border-radius: 20px 20px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $('#header').load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header"></div>
+
+    <div class="main">
+        <div class="contents_name">
+            <img src="image/contents_science.jpg" height="100px" width="600px">
+        </div>
+        <div class="grid-container">
+            <div><a href="map.html">1</a></div>
+            <div><a href="map.html">2</a></div>
+            <div><a href="listQuiz.html">Review 1</a></div>
+            <div><a href="map.html">3</a></div>
+            <div><a href="map.html">4</a></div>
+            <div><a href="listQuiz.html">Review 2</a></div>
+            <div><a href="map.html">5</a></div>
+            <div><a href="map.html">6</a></div>
+            <div><a href="listQuiz.html">Review 3</a></div>
+            <div><a href="map.html">7</a></div>
+            <div><a href="map.html">8</a></div>
+            <div><a href="listQuiz.html">Review 4</a></div>
+            <div><a href="map.html">9</a></div>
+            <div><a href="map.html">10</a></div>
+            <div><a href="listQuiz.html">Review 5</a></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div id="footer-content">
+            <img src="images/header/footer-text.svg" alt="Footer Text">
+        </div>
+        <div id="map">
+            <img src="images/header/map.svg" alt="Map">
+        </div>
+    </div>
+</body>
+
+
+</html>
