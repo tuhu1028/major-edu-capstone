@@ -76,7 +76,7 @@
 }
 
 .footer {
-    margin-left: 500px;
+    margin-left: 700px;
     position: absolute;
     margin-top: -400px;
     /* background-color: #FFDD17; */
@@ -102,4 +102,42 @@
     width: 50%;
     padding: 10px;
     height: 50px;
+}
+
+
+/* footer_map */
+
+.footer_map::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_map {
+    margin-left: 800px;
+    position: absolute;
+    margin-top: -350px;
+    /* background-color: #FFDD17; */
+    height: max-content;
+    position: absolute;
+}
+
+.footer_column_contact_map {
+    float: left;
+    width: 70%;
+    height: 50px;
+    padding-left: 20%;
+    /* font-size: 14px; */
+    font-family: courier;
+    color: black;
+    font: 8px;
+}
+
+.footer_column_logo_map {
+    margin-top: 100px;
+    /* background-color: #FFDD17; */
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: max-content;
 }
