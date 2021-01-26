@@ -6,19 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Demo Unit">
     <meta name="author" content="Uyen DLT">
-    <!-- <link rel="stylesheet" href="css/headerandfooter.css"> -->
-    <!-- <link rel="stylesheet" href="css/nav.css"> -->
     <link rel="stylesheet" href="mystyle_map.css">
     <script src="myfunction.js"></script>
-    <link rel="stylesheet" href="css/headerandfooter.css">
-    <!-- <link rel="stylesheet" href="css/nav.css"> -->
-
-
-    <title>Demo Map</title>
+    <!-- <link rel="stylesheet" href="css/headerandfooter.css"> -->
     <style>
         * {
             box-sizing: border-box;
         }
+        /* Map */
         
         .map::after {
             content: "";
@@ -34,20 +29,20 @@
             background-position: center;
             position: relative;
             height: 1000px;
-            margin-top: -15%;
+            margin-top: -2%;
         }
         
-        .lession {
+        .lesson {
             /* background-color: aqua; */
             width: 40%;
             float: left;
             padding-left: 24%;
-            padding-top: 10%;
+            padding-top: 5%;
             /* position: static; */
         }
         
-        #lession {
-            width: 150px;
+        #lesson {
+            width: 100px;
             height: 150px;
             background: url(image/ic_lesson.png) 0 0;
             background-repeat: no-repeat;
@@ -91,7 +86,7 @@
             /* background-color: blueviolet; */
             width: 50%;
             float: left;
-            padding-left: 35%;
+            padding-left: 7%;
             padding-top: 0%;
             height: 300px;
         }
@@ -101,7 +96,6 @@
             background-image: url(image/ic_progress.png) 0 0;
             width: 150px;
             height: 150px;
-            background-repeat: no-repeat;
             padding-top: 0%;
         }
         /* Hover cho title */
@@ -109,25 +103,31 @@
         .overlay {
             opacity: 0;
             font-size: 2.5em;
+            text-decoration: none;
         }
         
-        .lession:hover .overlay {
+        .lesson:hover .overlay {
             opacity: 1;
+            font-size: xx-large;
         }
         
         .quiz:hover .overlay {
             opacity: 1;
+            font-size: xxx-large;
+            text-decoration: none;
         }
         
         .game:hover .overlay {
             opacity: 1;
+            font-size: xxx-large;
         }
         
         .progress:hover .overlay {
             opacity: 1;
+            font-size: xxx-large;
         }
         
-        .lession-content {
+        .lesson-content {
             display: none;
             position: absolute;
             background-color: #f1f1f1;
@@ -137,36 +137,82 @@
             z-index: 1;
         }
         
-        .lession-content a {
+        .lesson-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
         
-        .lession a:hover {
-            background-color: #ddd;
-        }
-        
         .show {
             display: block;
         }
+        /* hover lesson */
         
-        li a,
-        .dropbtn_lession {
-            position: relative;
+        .dropdown_lesson :hover .dropdown-content {
+            display: block;
+        }
+        /* li {
+            float: left;
+        } */
+        
+        li a {
             display: inline-block;
-            color: #262261;
-            /* text-align: center; */
+            text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            border-radius: 20px;
+        }
+        
+        .dropbtn_lesson {
+            opacity: 0;
+        }
+        
+        .dropbtn_lesson:hover {
+            opacity: 1;
+        }
+        
+        li a:hover,
+        .dropdown:hover .dropbtn_lesson {
+            color: #262261;
+            font-size: xxx-large;
+            text-decoration: none;
+        }
+        
+        li.dropdown {
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* .dropdown-content a {
+            color: #262261;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        } */
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            font-size: larger;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
     </style>
     <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <script>
         $(function() {
-            $('#header').load('header.html');
+            $('#header').load("header.html");
             $("#footer").load("footer_map.html");
         });
     </script>
@@ -177,82 +223,45 @@
 
 <body>
     <!-- header -->
-    <div class="header">
-        <!-- logo -->
-        <div id="logo">
-            <a href="homepage.html"><img src="images/header/MajorEdu-logo.svg" alt="logo "></a>
-        </div>
 
-        <!-- navigator -->
-        <div class="nav-button">
-            <a href="homepage.html"><img src="images/header/home-button.svg" alt="Home Button"></a>
-        </div>
-        <div class="subject-dropdown">
-            <img id="subject-button" src="images/header/subject-button.svg" alt="Subject Button">
-            <div class="subject-dropdown-content">
-                <a href="unit.html"><img id="subject-images" src="images/header/math.svg" alt=""></a>
-                <a href="unit.html"><img id="subject-images" src="images/header/science.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="nav-button">
-            <a href="showNoti.html"><img src="images/header/notice-button.svg" alt="Notice Button"></a>
-        </div>
-
-
-        <div id="avatar">
-            <img src="images/header/avatar.svg" alt="Avatar">
-        </div>
-
-        <!-- view more profile-->
-        <div class="view-more-profile">
-            <button onclick="myFunction()" class="view-more-profile-dropbtn">haotpv <img
-                    src="images/header/down-arrow.svg" alt=""></button>
-            <div id="view-more-profile-dropdown" class="view-more-profile-dropdown-content">
-                <a href="profile.html"><img src="images/header/profile.svg" alt=""></a>
-                <a href="changepassword.html"><img src="images/header/change-password.svg" alt=""></a>
-                <a href="grade.html"><img src="images/header/grade.svg" alt=""></a>
-                <a href="login.html"><img src="images/header/log-out.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <br><br><br><br><br>
     <div class="main">
+
         <div class="map">
-            <div class="lession">
+            <div id="header"></div>
+            <div class="lesson">
                 <ul>
                     <li class="dropdown">
                         <img src="image/lesson.gif" height="200px" width="200px" style="border-radius: 50px;">
-                        <a href="#" class="dropbtn_lession">Lession</a>
+                        <a href="#" class="dropbtn_lesson overlay">Lesson</a>
                         <div class="dropdown-content">
-                            <a href="#">Lession 1</a>
-                            <a href="#">Lession 2</a>
+                            <a href="#">Lesson 1</a>
+                            <a href="#">Lesson 2</a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="quiz">
-                <a href="#">
+                <a href="#" style="text-decoration: none;">
                     <img id="quiz" src="image/quiz.gif" width="1" height="1">
                     <div class="overlay">Quiz</div>
                 </a>
 
             </div>
             <div class="game">
-                <a href="#">
+                <a href="#" style="text-decoration: none;">
                     <img id="game" src="image/game.gif" width="400px" height="400px">
                     <div class="overlay">Game</div>
                 </a>
             </div>
-            <!-- <div class="progress">
-                <a href="#">
+            <div class="progress">
+                <a href="progress_map.html" style="text-decoration: none;">
                     <img id="progress" src="image/ic_progress.png" width="300" height="300">
                     <div class="overlay">Progress</div>
                 </a>
-            </div> -->
+            </div>
         </div>
+
     </div>
-
-
     <div id="footer"></div>
 
 </body>
